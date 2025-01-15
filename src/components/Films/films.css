@@ -1,0 +1,244 @@
+
+.Films {
+    transition: background-color 0.3s, color 0.3s;
+    padding: 20px;
+}
+
+.Films.dark {
+    background-color: #121212;
+    color: #fff;
+}
+
+.Films.light {
+    background-color: #fff;
+    color: #121212;
+}
+
+.theme-toggle-btn {
+    background-color: #0080e8;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #005bb5;
+}
+
+
+.Films__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.Films__genre-selector {
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.Films__genre-selector select {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #0080e8;
+    color: #fff;
+    border: 2px solid #005bb5;
+    border-radius: 10px;
+    outline: none;
+    width: 220px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.Films__genre-selector select:focus {
+    border-color: #00bfff;
+}
+
+.Films__genre-selector select:hover {
+    background-color: #005bb5;
+}
+
+.Films__genre-selector select option {
+    background-color: #0080e8;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.Films__genre-selector select option:hover {
+    background-color: #005bb5;
+}
+
+.Films__search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Films__search input {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #0080e8;
+    color: #fff;
+    border: 2px solid #005bb5;
+    border-radius: 10px;
+    width: 220px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.Films__search input:focus {
+    border-color: #00bfff;
+}
+
+.Films__search-button {
+    background: #0080e8;
+    padding: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Films__search-input::placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+
+.Films__card {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 112, 228, 1) 86%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+    padding: 5px;
+    gap: 10px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-x: scroll;
+}
+
+.Films__card:hover {
+    background: linear-gradient(90deg, rgba(0, 112, 228, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    transform: scale(1.05);
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.Films-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.Films__card-img {
+    max-height: 200px;
+    width: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.Films__card-desc {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.Films__card-rating {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.Films__card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #0080e8;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Films__card button:hover {
+    background: #005bb5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-self: center;
+    justify-self: center;
+}
+.Films__card-link{
+    background: #0080e8;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    border-bottom: 0px;
+}
+@media (max-width: 870px) {
+    .Films__card{
+        max-width: 200px;
+        width: 100%;
+    }
+}
+@media (max-width: 759px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+
+}
+@media (max-width: 759px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+@media (max-width: 490px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+}
+@media (max-width: 313px) {
+.Films__search-button{
+    margin-top: 20px;
+}
+}
+.Film__card-desc{
+    text-align: center;
+}
+.loading{
+    text-align: center;
+    animation: loadingScroll 2s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading__img{
+    width: 100px;
+    height: 100px;
+}
+@keyframes loadingScroll {
+    0% {
+      transform: rotate(360deg);
+    }
+  }
