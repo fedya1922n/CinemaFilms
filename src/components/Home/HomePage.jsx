@@ -2,7 +2,7 @@ import React from 'react';
 import "./Home.css"
 import { centryImg, DisneyImg, DreanWorksImg } from '../../assets/image/image';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="Home">
       <section className='section'>
@@ -42,4 +42,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default HomePage;
